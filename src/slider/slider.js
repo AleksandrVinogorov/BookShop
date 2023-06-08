@@ -2,9 +2,9 @@ import React from "react"
 import { useState, useEffect } from "react"
 const Slider = () => {
     const slides = [
-        { id: 0, url: 'https://i.ibb.co/1qhYpX4/1.jpg' },
-        { id: 1, url: 'https://clck.ru/3449oK' },
-        { id: 2, url: 'https://clck.ru/3449oU' },
+        { id: 0, url: 'https://postimg.cc/KkQzJfd1' },
+        { id: 1, url: 'https://postimg.cc/YL9SVgHb' },
+        { id: 2, url: 'https://postimg.cc/PNrNPGwY' },
     ];
 
     const [slideIndex, setSlideIndex] = useState(0);
