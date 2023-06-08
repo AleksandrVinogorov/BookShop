@@ -1,0 +1,331 @@
+/* Секция книги */
+
+.books-container {
+    display: flex;
+    max-width: 1440px;
+    margin: 105px 0 auto;
+    padding-right: 10px;
+
+    @media (max-width: 960px) {
+        margin: 20px 0 auto;
+    }
+    @media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.books-container__catalogues {
+    width: 416px;
+    height: 710px;
+    background: #EFEEF6;
+
+    @media (max-width: 1200px) {
+        width: 388px;
+    }
+    @media (max-width: 1110px) {
+        width: 300px;
+    }
+    @media (max-width: 970px) {
+        min-width: 210px;
+    }
+    @media (max-width: 650px) {
+        min-width: 210px;
+    }
+    @media (max-width: 630px) {
+        min-width: 150px;
+    }
+    @media (max-width: 480px) {
+        width: 100vw;
+        min-width: 360px;
+        max-height: 200px;
+    }
+}
+.catalogues {
+    padding-left: 160px;
+    padding-top: 26px;
+    margin: 0;
+
+    li {
+        list-style-type: none;
+        margin-top: 18.5px;
+
+        &:hover::before {
+            position: absolute;
+            margin-left: -14px;
+            content: "●";
+            color: #756AD3;
+        }
+
+        button {
+            padding: 0;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 15px;
+            text-decoration: none;
+            font-family: 'Montserrat';
+            text-transform: capitalize;
+            color: #5C6A79;
+
+            @media (max-width: 480px) {
+                text-align: start;
+            }
+        }
+
+        .active {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+            transition: 0.1s ease;
+            color: #1C2A39;
+        }
+
+        @media (max-width: 560px) {
+            margin-top: 12.5px;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        padding-left: 60px;
+    }
+    @media (max-width: 610px) {
+        padding-left: 20px;
+    }
+    @media (max-width: 480px) {
+        display: grid;
+        grid-template-columns: 131px 22vw auto auto;
+        margin: 0 auto;
+        gap: 8px;
+        padding: 0px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 5px;
+    }
+    @media (max-width: 400px) {
+        grid-template-columns: 110px 15vw auto auto;
+        width: auto;
+        overflow: hidden;
+    }
+}
+
+/* Секция книги */
+.books-container__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 76px;
+    margin-left: -60px;
+    margin-top: 46px;
+    width: 924px;
+    .card {
+        width: 424px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: 'Montserrat';
+        &:hover {
+            transform: scale(1.01);
+            transition: .5s;
+        }
+        @media (max-width: 1200px) {
+            width: 400px;
+        }
+        @media (max-width: 1030px) {
+            width: 375px;
+        }
+        @media (max-width: 970px) {
+            width: 424px;
+            height: 300px;
+        }
+        @media (max-width: 660px) {
+            width: 400px;
+        }
+        @media (max-width: 580px) {
+            gap: 10px;
+            width: 310px;
+            margin-left: -10px;
+        }
+        @media (max-width: 480px) {
+            width: 374px;
+            padding-left: 8px;
+        }
+        @media (max-width: 400px) {
+            width: 352px;
+        }
+    }
+    @media (max-width: 1366px) {
+        gap: 50px;
+    }
+    @media (max-width: 1260px) {
+        gap: 30px;
+    }
+    @media (max-width: 970px) {
+        width: 100%;
+        margin-left: 10px;
+        flex-direction: column;
+    }
+    @media (max-width: 970px) {
+        margin-top: 10px;
+    }
+}
+.load-books {
+    position: relative;
+    margin: 0 auto;
+    width: 176px;
+    height: 45px;
+    border: 1px solid #4C3DB2;
+    &:hover {
+        transition: 0.2s ease;
+        background-color: #4C3DB2;
+    }
+    p {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 8px;
+        line-height: 10px;
+        color: #4C3DB2;
+        text-transform: uppercase;
+    }
+}
+.load-books:hover p {
+    transition: 0.2s ease;
+    color: white;
+}
+
+.card__image {
+    width: 212px;
+    height: 300px;
+    @media (max-width: 1030px) {
+        width: 188px;
+        height: 278px;
+    }
+    @media (max-width: 970px) {
+        width: 212px;
+        height: 300px;
+    }
+    @media (max-width: 530px) {
+        width: 157px;
+        height: 240px;
+    }
+    @media (max-width: 480px) {
+        width: 100%;
+        height: 261px;
+    }
+    @media (max-width: 400px) {
+        width: 168px;
+        height: 244px;
+    }
+}
+.card__container-info {
+    width: 176px;
+
+    @media (max-width: 580px) {
+        width: 139px;
+    }
+    @media (max-width: 480px) {
+        width: 170px;
+        margin-left: 30px;
+    }
+    @media (max-width: 400px) {
+        width: 170px;
+        margin-left: 0px;
+    }
+}
+.card__author {
+    margin: 0;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+
+    text-transform: capitalize;
+    color: #5C6A79;
+}
+
+.card__title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #1C2A39;
+    margin: 0;
+
+    @media (max-width: 480px) {
+        font-size: 12px;
+    }
+}
+
+.card__reviews {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    .card__rating {
+        display: inline-block;
+        font-size: 0;
+    }
+
+    .card__amount-review {
+        font-family: 'Open Sans';
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 14px;
+        color: #5C6A79;
+    }
+}
+
+.card__description {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    text-transform: capitalize;
+    color: #5C6A79;
+}
+
+.card__price {
+    width: 41px;
+    height: 16px;
+    margin: 16px 0;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.card__button {
+    width: 176px;
+    height: 45px;
+    border: 1px solid #4C3DB2;
+    color: #4C3DB2;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 8px;
+    line-height: 10px;
+
+    &:hover {
+        transition: 0.2s ease;
+        background-color: #4C3DB2;
+        color: white;
+    }
+
+    @media (max-width: 580px) {
+        width: 139px;
+        height: 40px;
+    }
+
+    @media (max-width: 480px) {
+        width: 150px;
+        height: 50px;
+    }
+}
+
+.active-button {
+    color: #5C6A79;
+    border: 1px solid #EEEDF5;
+
+    &:hover {
+        background-color: #EEEDF5;
+        color: black;
+    }
+}
