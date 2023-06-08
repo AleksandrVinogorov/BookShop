@@ -2,10 +2,11 @@ import React from "react"
 import { useState, useEffect } from "react"
 const Slider = () => {
     const slides = [
-        { id: 0, url: 'https://i.ibb.co/jTC4G78/3.jpg' },
-        { id: 1, url: 'https://postimg.cc/YL9SVgHb' },
-        { id: 2, url: 'https://postimg.cc/PNrNPGwY' },
+        { id: 0, url: 'https://i.ibb.co/gt2nMS4/1.jpg' },
+        { id: 1, url: 'https://i.ibb.co/Xsggf0w/2.jpg' },
+        { id: 2, url: 'https://i.ibb.co/jTC4G78/3.jpg' },
     ];
+    
 
     const [slideIndex, setSlideIndex] = useState(0);
     const [intervalId, setIntervalId] = useState(null);
