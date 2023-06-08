@@ -2,7 +2,7 @@ import React from "react"
 import { useState, useEffect } from "react"
 const Slider = () => {
     const slides = [
-        { id: 0, url: 'https://postimg.cc/KkQzJfd1' },
+        { id: 0, url: 'https://i.ibb.co/jTC4G78/3.jpg' },
         { id: 1, url: 'https://postimg.cc/YL9SVgHb' },
         { id: 2, url: 'https://postimg.cc/PNrNPGwY' },
     ];
