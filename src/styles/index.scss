@@ -1,0 +1,38 @@
+@import "./blocks/header";
+@import "./blocks/slider";
+@import "./blocks/booksContainer";
+@import "./blocks/footer";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&family=Open+Sans&display=swap');
+
+#root {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    font-family: 'Montserrat';
+}
+
+a,
+button {
+    cursor: pointer;
+}
+
+.header {
+    margin: 0 auto;
+    max-width: 1117px;
+    height: 116px;
+}
+
+.hidden {
+    display: none;
+    opacity: 0;
+}
+
+button {
+    border: 0;
+    background-color: transparent;
+}
