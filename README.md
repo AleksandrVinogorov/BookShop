@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+ЗАДАНИЕ
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+В рамках проекта вам необходимо:
 
-## Available Scripts
+Сверстать главную страницу интернет-магазина Bookshop. Макет находится здесь. Подключить Google Books API так, чтобы данные о книгах подгружались с сервера. Подключить созданный вами ранее слайдер. Поработать над правильной организацией проекта: реализовать модульную структуру; подключить Webpack; настроить сборку с минификацией. Применить пройденные вами ранее инструменты оптимизации.
 
-In the project directory, you can run:
+ФУНКЦИОНАЛЬНЫЕ ТРЕБОВАНИЯ В рамках проекта нужно создать одну (главную) страницу книжного магазина. На странице должен быть следующий набор элементов:
 
-### `npm start`
+Шапка сайта Шапка содержит логотип, навигацию и набор кнопок. Ссылки в меню можно оставить пустыми, так как реализация остальных страниц сайта в проекте не предусмотрена. Кнопки авторизации, поиска и корзины неактивны. Однако при добавлении товара в корзину у иконки должен появиться бейджик с количеством товара в корзине. При прокрутке сайта шапка должна оставаться закреплённой в верхней части экрана.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Слайдер Под шапкой сайта располагается слайдер. Чтобы сократить время разработки, рекомендуем вам использовать слайдер, которые вы создали при прохождении модулей по JavaScript. Слайдер автоматически пролистывает изображения каждые 5 секунд, а после последнего изображения вновь переключается на первое. Перелистывать изображения можно также с помощью точек под слайдером. Справа от слайдера располагаются цветные блоки. Их нужно сверстать как ссылки, адреса ссылок можно оставить пустыми.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Список категорий и список книг Под слайдером в левой части экрана располагается список категорий. Активная категория должна быть выделена визуально. По умолчанию в качестве активной выбрана первая категория в списке. Клик на неактивную категорию делает её активной, и список книг перезагружается, чтобы отобразить книги из этой категории. Список книг подгружается из Google Books API в соответствии с выбранной категорией. Для списка книг необходимо реализовать ленивую загрузку: сначала подгружаются первые 6 книг, по клику на кнопку «Load more» — ещё 6, и так далее.
 
-### `npm test`
+Карточка книги В карточке книги должна быть отображена следующая информация:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Обложка. Если API не возвращает обложку, подставить вместо неё любую картинку-плейсхолдер. Автор. Если авторов несколько, перечислить их через запятую. Заголовок. Рейтинг: от 1 до 5 звёздочек плюс общее количество отзывов. Если в данных о книге нет рейтинга, не показывать эту строчку. Описание. Если текст в описании занимает больше 3-х строк, его нужно обрезать и добавить в конце многоточие. Цена с указанием валюты. Если в данных о книге нет цены, не показывать эту строчку. Ниже приведён пример карточки товара, а также названия свойств в объекте книги, которые содержат необходимую информацию:
 
-### `npm run build`
+Под описанием каждой книги должна быть кнопка «Buy now». При клике на неё товар добавляется в корзину, а кнопка меняет внешний вид (см. скриншот выше). При повторном нажатии на кнопку товар убирается из корзины.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Информация о книгах, добавленных в корзину, должна сохраняться в localStorage.
