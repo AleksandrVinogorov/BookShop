@@ -17,7 +17,7 @@ const BooksList = (props) => {
     setResultsLimit(6);
     setStartIndex(0);
   }
-
+console.log(bookData);
 
 
   const handleAddToCart = (book) => {
